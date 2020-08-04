@@ -1,2 +1,2 @@
-# php1
+# php
 Base PHP course

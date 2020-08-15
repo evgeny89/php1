@@ -16,8 +16,11 @@
             <?php //require_once('./less/less1.php') ?>  <!-- Lesson 1 -->
             <!--h3>Lesson 2</h3-->
             <?php //require_once ('./less/less2.php') ?> <!-- Lesson 2 -->
-            <h3>Lesson 3</h3>
-            <?php require_once ('./less/less3.php') ?> <!-- Lesson 2 -->
+            <!--h3>Lesson 3</h3-->
+            <?php //php require_once ('./less/less3.php') ?> <!-- Lesson 2 -->
+            <a href="/gallery">фотогалерея</a>
+            <h3>Lesson 4</h3>
+            <?php require_once ('./less/less4.php') ?> <!-- Lesson 2 -->
         </div>
         <footer class="footer">
             <?= date('Y')?> &copy;

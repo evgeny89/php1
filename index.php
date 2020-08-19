@@ -1,3 +1,7 @@
+<?php
+$path = dirname(__DIR__ . '/php1.ru');
+require_once(__DIR__ . '/controllers/connect.php');
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,22 +13,26 @@
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Базовый курс PHP</h1>
-        <div class="lesson">
-            <!--h3>Lesson 1</h3-->
-            <?php //require_once('./less/less1.php') ?>  <!-- Lesson 1 -->
-            <!--h3>Lesson 2</h3-->
-            <?php //require_once ('./less/less2.php') ?> <!-- Lesson 2 -->
-            <!--h3>Lesson 3</h3-->
-            <?php //php require_once ('./less/less3.php') ?> <!-- Lesson 2 -->
-            <a href="/gallery">фотогалерея</a>
-            <h3>Lesson 4</h3>
-            <?php require_once ('./less/less4.php') ?> <!-- Lesson 2 -->
-        </div>
-        <footer class="footer">
-            <?= date('Y')?> &copy;
-        </footer>
+<div class="container">
+    <header class="header">
+        <nav class="menu">
+            <?php require_once(__DIR__ . '/pages/menu.php') ?>
+        </nav>
+    </header>
+    <h1>Базовый курс PHP</h1>
+    <div class="lesson">
+        <!--h3>Lesson 1</h3-->
+        <?php //require_once('./less/less1.php') ?> <!-- Lesson 1 -->
+        <!--h3>Lesson 2</h3-->
+        <?php //require_once ('./less/less2.php') ?> <!-- Lesson 2 -->
+        <!--h3>Lesson 3</h3-->
+        <?php //require_once ('./less/less3.php') ?> <!-- Lesson 2 -->
+        <!--h3>Lesson 4</h3-->
+        <?php //require_once ('./less/less4.php') ?> <!-- Lesson 2 -->
     </div>
+    <footer class="footer">
+        <?= date('Y') ?> &copy;
+    </footer>
+</div>
 </body>
 </html>

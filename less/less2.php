@@ -135,24 +135,27 @@ echo "\$val = {$a}, \$pow = {$b}, резальтат: ". power($a, $b);
 $hours = date('H');
 $minutes = date('i');
 
-function timeToString($num, $type = 'hour')
+$hoursStringName = ['час', 'часа', 'часов'];
+$minutesStringName = ['минута', 'минуты', 'минут'];
+
+function timeToString($num, $type)
 {
     if ($num > 10 && $num < 20) {
-        return $type === 'hour' ? 'часов' : 'минут';
+        return $type[2];
     }
 
     $residue = $num % 10;
     switch ($residue) {
         case 1:
-            return $type === 'hour' ? 'час' : 'минута';
+            return $type[0];
         case 2:
         case 3:
         case 4:
-            return $type === 'hour' ? 'часа' : 'минуты';
+            return $type[1];
         default:
-            return $type === 'hour' ? 'часов' : 'минут';
+            return $type[2];
     }
 }
 
 echo '<h5>Задание 7</h5>';
-echo "{$hours} ". timeToString($hours) ." {$minutes} ". timeToString($minutes, 'min');
+echo "{$hours} ". timeToString($hours, $hoursStringName) ." {$minutes} ". timeToString($minutes, $minutesStringName);

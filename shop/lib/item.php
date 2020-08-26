@@ -19,7 +19,7 @@ comm;
     $addCommentForm = <<<form
         <form class="form comment" method="post" action="/lib/addComment.php">
             <input type="hidden" name="product" value="{$param[0]}">
-            <input type="hidden" name="author" value="1"> <!-- потом добавить реального автора -->
+            <input type="hidden" name="author" value="{$_SESSION['user']}"> <!-- потом добавить реального автора -->
             <div class="block"><textarea name="comment" class="textarea" placeholder="оставте отзыв" cols="50" rows="6" maxlength="350"></textarea></div>
             <button class="btn">Отправить</button>
         </form>
@@ -38,7 +38,7 @@ function getItem() {
     $itemCard = <<<item
         <div class="item">
            <div class="card">
-                <h4><a href="/catalog/{$item['id']}">{$item['name']}</a></h4>
+                <h4 class="title-card"><span>{$item['name']}</span> <a href="/lib/addToCard.php?id={$item['id']}">add to card</a></h4>
                 <div>
                     <h5>{$item['price']} ₽</h5>
                     <p>{$item['description']}</p>

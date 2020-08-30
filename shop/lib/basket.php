@@ -7,6 +7,10 @@ function getBasket()
     $sql = "SELECT products.id, products.name, products.price, products.description, baskets.count FROM baskets LEFT JOIN products ON baskets.product_id = products.id WHERE user_id = '{$_SESSION['user']}' and status = 0";
     $result = mysqli_query($link, $sql);
 
+    if (!mysqli_num_rows($result)) {
+        return $basketList .= '<h3>корзина пуста</h3></div>';
+    }
+
     while ($res = mysqli_fetch_assoc($result)) {
         $basketList .= <<<card
             <div class="card">
@@ -21,7 +25,7 @@ function getBasket()
                 </div>
             </div>
 card;
-
     }
+
     return $basketList . '</div>';
 }

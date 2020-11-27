@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 50px calc(50% - 500px);
+    background-color: #bbd7d7;
+    min-height: 100vh;
+}
+
+.form {
+    width: 320px;
+    height: 200px;
+    border: 1px solid black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.textarea {
+    padding: 5px;
+    outline: none;
+}
+
+.block {
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    align-items: flex-end;
+}
+
+.block input {
+    padding: 5px;
+    font-size: 14px;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+}
+
+.btn {
+    padding: 5px;
+}
+
+.nav {
+    height: 150px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #463498;
+    font-size: 20px;
+    transition: color .3s;
+}
+.menu a:hover {
+    color: #b13cff;
+}
+
+.catalog {
+    display: flex;
+}
+
+.categories {
+    padding: 20px;
+}
+
+.products {
+    padding: 10px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    border: 1px solid #a2a957;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.comm {
+    border: 1px solid #7d4f80;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.comment {
+    margin-top: 20px;
+}

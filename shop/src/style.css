@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: #463498;
+}
+
+a:hover {
+    color: #b13cff;
+}
+
 .container {
     padding: 50px calc(50% - 600px);
     background-color: #bbd7d7;
@@ -65,13 +74,12 @@
 }
 
 .menu a {
-    text-decoration: none;
-    color: #463498;
     font-size: 20px;
     transition: color .3s;
 }
-.menu a:hover {
-    color: #b13cff;
+
+.menu li {
+    padding: 0 10px;
 }
 
 .catalog {
@@ -116,4 +124,48 @@
 .title-card {
     display: flex;
     justify-content: space-between;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+th {
+    font-size: 18px;
+    padding: 10px;
+    text-align: left;
+}
+
+.order {
+    padding: 5px;
+}
+
+
+.order td {
+    text-align: center;
+}
+
+.order form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-product input, .add-product select {
+    display: block;
+    padding: 10px;
+    margin: 20px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+}
+
+.add-product button {
+    border: none;
+    border-radius: 5px;
+    margin-left: 20px;
 }

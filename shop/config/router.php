@@ -4,6 +4,7 @@ function getRoute() {
     global $link, $param;
     $default = ['path' => '', 'name' => 'Главная'];
 
+
     if(empty($_GET['page'])) {
         return $default;
     }

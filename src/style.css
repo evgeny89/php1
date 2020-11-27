@@ -37,3 +37,15 @@ td {
     border: 1px solid black;
     text-align: center;
 }
+
+a {
+    text-decoration: none;
+    color: #1057ab;
+    font-size: 18px;
+    transition: transform .3s;
+    display: inline-block;
+}
+
+a:hover {
+    transform: scale(1.1);
+}

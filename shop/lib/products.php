@@ -15,7 +15,10 @@ function getProducts()
     while ($res = mysqli_fetch_assoc($result)) {
         $productList .= <<<card
             <div class="card">
-                <h4><a href="/catalog/{$res['id']}">{$res['name']}</a></h4>
+                <h4 class="title-card">
+                    <a href="/catalog/{$res['id']}">{$res['name']}</a>
+                    <a href="/lib/addToCard.php?id={$res['id']}">add to card</a>
+                </h4>
                 <div>
                     <h5>{$res['price']} ₽</h5>
                     <p>{$res['description']}</p>

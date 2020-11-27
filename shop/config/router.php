@@ -17,18 +17,29 @@ function getRoute() {
 
 function getPage() {
     $route = getRoute();
-    $page = '';
     $layout = file_get_contents('templates/index.html');
 
     if(!empty($route['path'])) {
         ob_start();
-        include "pages/{$route['path']}.php";
+        include_once "pages/{$route['path']}.php";
+        $page = ob_get_clean();
+    } else {
+        ob_start();
+        include_once "pages/index.php";
         $page = ob_get_clean();
     }
 
     $menu = menu();
 
-    return str_replace(['{{title}}','{{menu}}', '{{content}}'], [$route['name'], $menu, $page], $layout);
+    if (!empty($_SESSION['user'])) {
+        $menu = str_replace('<li><a href="/auth">Вход</a></li>', '', $menu);
+    } else {
+        $menu = str_replace('<li><a href="/lib/logout.php">Выход</a></li>', '', $menu);
+    }
+
+    $subMenu = subMenu();
+
+    return str_replace(['{{title}}','{{menu}}', '{{subMenu}}', '{{content}}'], [$route['name'], $menu, $subMenu, $page], $layout);
 }
 
 

@@ -49,3 +49,75 @@ a {
 a:hover {
     transform: scale(1.1);
 }
+
+.menu {
+    padding: 0 50px;
+}
+
+.menu > ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+}
+
+.menu li {
+    padding: 10px;
+    position: relative;
+}
+
+.sub-menu {
+    visibility: hidden;
+    position: absolute;
+    list-style: none;
+    background-color: #e6f4f5;
+    border: 1px solid #209bbf;
+    top: 35px;
+    line-height: 10px;
+}
+
+.menu li:hover > .sub-menu {
+    visibility: visible;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 300px;
+    height: 350px;
+    border: 1px solid #26a3c6;
+    border-radius: 15px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card img{
+    max-width: 250px;
+    max-height: 200px;
+    margin: 20px;
+}
+
+.card a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card a:hover {
+    transform: none;
+}
+
+.card a:hover img {
+    box-shadow: 0 0 25px #47f5fa;
+}
+
+.viewer {
+    display: flex;
+    justify-content: center;
+}
